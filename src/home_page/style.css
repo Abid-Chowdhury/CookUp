@@ -14,13 +14,32 @@
 body {
     background-color: var(--bg);
     color: var(--fg);
+    padding: 15px;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
     margin: 0;
-    margin-left: 15px;
-    margin-top: 15px;
     font-size: var(--heading);
     font-family: 'Fugaz One', cursive;
     color: var(--ac);
 }
+
+.profile-button-container {
+    height: 48px;
+    width: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.profile-button-container img {
+    width: 48px;
+}
+
