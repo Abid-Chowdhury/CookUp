@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:wght@300;400;600&display=swap');
+/* font-family: 'Fugaz One', cursive; */
+/* font-family: 'Inter', sans-serif; */
+
+/* variables */
+:root {
+    --bg: rgb(42, 43, 46);
+    --fg: rgb(245, 240, 246);
+    --ac: rgb(225, 116, 81);
+
+    --heading: 48px;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+h1 {
+    margin: 0;
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: var(--heading);
+    font-family: 'Fugaz One', cursive;
+    color: var(--ac);
+}
