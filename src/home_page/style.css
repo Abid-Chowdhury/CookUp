@@ -94,4 +94,45 @@ h1 {
 
 .suggestion-card h3 {
     margin-top: 5px;
+    margin-bottom: 0px;
 }
+
+/* all recipes */
+.recipe-card {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.recipe-card img {
+    height: 96px;
+    width: 96px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.recipe-card h3 {
+    margin: 0;
+}
+
+.recipe-card .right-side {
+    width: 100%;
+    justify-content: space-around;
+    padding: 15px 0px 0px 15px;
+}
+
+.recipe-card .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-card .rating {
+    background-color: var(--bg2);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.recipe-card .bottom h3 {
+    font-weight: 400;
+}
+
+
