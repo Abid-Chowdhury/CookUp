@@ -39,6 +39,7 @@ h1 {
     overflow: hidden;
     border-radius: 50%;
     margin-top: auto;
+    cursor: pointer;
     margin-bottom: auto;
 }
 
@@ -97,6 +98,7 @@ h1 {
         margin: 0;
     }
 }
+
 /* bottom nav */
 .bottom-nav-container {
     background-color: var(--bg2);

@@ -40,10 +40,77 @@ h1 {
     border-radius: 50%;
     margin-top: auto;
     margin-bottom: auto;
+    border: 2px solid var(--ac);
+    cursor: pointer;
 }
 
 .profile-button-container img {
     width: 48px;
+}
+
+/* label */
+h2 {
+    margin-bottom: 35px;
+}
+
+/* sign in form */
+/* details input */
+h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 330px;
+    height: 60px;
+    background-color: var(--bg2);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: var(--fg);
+    padding-left: 15px;
+}
+
+/* forgot password */
+.forgot-password-div {
+    text-align: right;
+    & h5 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+/* sign in button */
+.button {
+    text-align: center;
+    background-color: var(--ac);
+    border-radius: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 70%;
+    color: var(--bg);
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+
+    & h2 {
+        margin: 0;
+    }
+}
+
+/* dont have account */
+.dont-have-account-div {
+    text-align: center;
+
+    & span {
+        color: var(--ac);
+        cursor: pointer;
+    }
+
 }
 
 /* bottom nav */
@@ -53,7 +120,7 @@ h1 {
     height: 70px;
     border-radius: 12px;
     display: flex;
-    margin-top: 98%;
+    margin-top: 68%;
 }
 
 .bottom-nav-container section {
