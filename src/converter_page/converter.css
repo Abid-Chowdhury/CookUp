@@ -46,6 +46,57 @@ h1 {
     width: 48px;
 }
 
+/* conversion unit */
+.conversion-unit {
+    display: flex;
+}
+
+.conversion-unit input {
+    height: 60px;
+    width: 246px;
+    background-color: var(--bg2);
+    border: 0;
+    outline: 0;
+    border-radius: 10px 0px 0px 10px;
+    color: var(--fg);
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.conversion-unit select {
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--ac);
+    width: 105px;
+    height: 60px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* down arrow */
+.down-arrow {
+    text-align: center;
+}
+
+/* convert button */
+.button {
+    text-align: center;
+    background-color: var(--ac);
+    border-radius: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    color: var(--bg);
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+
+    & h2 {
+        margin: 0;
+    }
+}
 /* bottom nav */
 .bottom-nav-container {
     background-color: var(--bg2);
@@ -53,6 +104,7 @@ h1 {
     height: 70px;
     border-radius: 12px;
     display: flex;
+    margin-top: 98%;
 }
 
 .bottom-nav-container section {
