@@ -47,6 +47,15 @@ h1 {
 }
 
 /* ingredients container */
+.ingredients-container {
+    overflow-y: scroll;
+    height: 667px;
+}
+
+.ingredients-container::-webkit-scrollbar {
+    display: none;
+}
+
 form .top,
 form .bottom {
     margin-top: 25px;
