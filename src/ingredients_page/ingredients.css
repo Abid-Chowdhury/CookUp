@@ -47,12 +47,16 @@ h1 {
 }
 
 /* ingredients container */
-.ingredients-container {
-    overflow-y: scroll;
-    height: 590px;
+.ingredients-container h2 {
+    margin-bottom: 0;
 }
 
-.ingredients-container::-webkit-scrollbar {
+.ingredients-sub-container {
+    overflow-y: scroll;
+    height: 540px;
+}
+
+.ingredients-sub-container::-webkit-scrollbar {
     display: none;
 }
 
