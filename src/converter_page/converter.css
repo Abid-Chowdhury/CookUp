@@ -72,6 +72,13 @@ h1 {
     height: 60px;
     font-size: 20px;
     text-align: center;
+    border: none;
+    outline: none;
+}
+
+.conversion-unit option {
+    background-color: var(--bg2);
+    color: white;
 }
 
 /* down arrow */
