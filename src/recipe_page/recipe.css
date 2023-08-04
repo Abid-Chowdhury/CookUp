@@ -99,7 +99,7 @@ h1 {
     display: flex;
 
     & ul {
-        margin: 0;
+        margin-top: 0;
     }
 
     & .left-side {
@@ -108,6 +108,27 @@ h1 {
 
     & .right-side {
         padding-left: 0;
+    }
+}
+
+/* recipe buttons */
+.recipe-buttons {
+    display: flex;
+    justify-content: space-around;
+
+    & div {
+        background-color: var(--ac);
+        border-radius: 12px;
+        text-align: center;
+        color: var(--bg);
+    }
+
+    & .view-full-recipe-button {
+        width: 70%;
+    }
+
+    & .save-button {
+        width: 20%;
     }
 }
 
