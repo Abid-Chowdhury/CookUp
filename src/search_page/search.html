@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>CookUp</h1>
+            <div class="profile-button-container" onclick="window.location.href = '../profile_page/profile.html';">
+                <img src="../images/profile_image.jpg" alt="profile image">
+            </div>
+        </header>
+
+        <div class="search-recipes-container">
+            <input id="search-query" type="text" placeholder="Search recipes">
+            <img id="search-icon" src="../images/search.svg" alt="search icon">
+        </div>
+
+        <div class="bottom-nav-container">
+            <section class="recipes-button-container" id="active" onclick="window.location.href = 'index.html';">
+                <img src="../images/profile_image.jpg">
+            </section>
+            <section class="ingredients-button-container" onclick="window.location.href = '../ingredients_page/ingredients.html';">
+                <img src="../images/profile_image.jpg">
+            </section>
+            <section class="calculator-button-container" onclick="window.location.href = '../converter_page/converter.html';">
+                <img src="../images/profile_image.jpg">
+            </section>
+        </div>
+
+    </div>
+
+    <script src="search.js"></script>
+
+</body>
+</html>
