@@ -1,14 +1,14 @@
-function get(str) {
+function getID(str) {
     return document.getElementById(str)
 }
 
 // search button function
 function redirectToSearchPage() {
-    var searchQuery = get('search-query').value
+    var searchQuery = getID('search-query').value
     location.href = '../search_page/search.html?' + searchQuery
 }
 
-var searchIcon = get('search-icon')
+var searchIcon = getID('search-icon')
 searchIcon.onclick = function () {
     redirectToSearchPage()
 }
