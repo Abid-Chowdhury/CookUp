@@ -3,11 +3,19 @@ function get(str) {
 }
 
 // search button function
-function redirectToSearchPage(searchQuery) {
+function redirectToSearchPage() {
+    var searchQuery = get('search-query').value
+    location.href = '../search_page/search.html?' + searchQuery
 }
 
 var searchIcon = get('search-icon')
 searchIcon.onclick = function () {
-    var searchQuery = get('search-query').value
-    location.href = '../search_page/search.html?' + searchQuery
+    redirectToSearchPage()
 }
+
+var sq = document.getElementById('search-query')
+sq.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        redirectToSearchPage()
+    }
+});
