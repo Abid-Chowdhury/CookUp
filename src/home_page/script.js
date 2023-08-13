@@ -3,13 +3,11 @@ function get(str) {
 }
 
 // search button function
-function redirectToSearchPage() {
-    location.href = '../search_page/search.html'
+function redirectToSearchPage(searchQuery) {
 }
 
 var searchIcon = get('search-icon')
 searchIcon.onclick = function () {
-    // var searchQuery = get('search-query')
-    // console.log(searchQuery.value)
-    redirectToSearchPage()
+    var searchQuery = get('search-query').value
+    location.href = '../search_page/search.html?' + searchQuery
 }
