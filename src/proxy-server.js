@@ -1,13 +1,10 @@
-const http = require('http');
-const https = require('https');
-const url = require('url');
-
-// Target API URL
-const targetUrl = 'https://api.example.com'; // Replace with your API's URL
+const http = require('http')
+const https = require('https')
+const url = require('url')
 
 // Create the proxy server
 const proxyServer = http.createServer((req, res) => {
-  const target = url.parse(targetUrl + req.url);
+  const target = url.parse(req.url);
   const options = {
     host: target.hostname,
     port: target.port || (target.protocol === 'https:' ? 443 : 80),
