@@ -8,18 +8,28 @@ var searchInput = document.getElementById('search-query')
 searchInput.value = searchQuery
 
 // api call
-const apiUrl = `http://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`
+async function fetchAPI() {
+    const apiUrl = `http://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`
+    
+    try {
+        const response = await fetch(apiUrl)
+        const data = await response.json()
+        console.log(data)
+        return data.meals.length
+    } catch (error) {
+        console.error('Fetch error:', error)
+        return 0
+    }
+}
 
-fetch(apiUrl)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Fetch error:', error);
-  });
+fetchAPI()
+    .then(results => {
+        updateResults(results)
+    })
 
-// update total results
-var totalResults = getID('total-results')
-totalResults.innerHTML = `12 results for ${searchQuery}`
+function updateResults(results) {
+    var totalResultsLabel = getID('total-results')
+    totalResultsLabel.innerHTML = `${results} results for ${searchQuery}`
+}
+
 
