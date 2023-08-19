@@ -159,13 +159,9 @@ h1 {
     margin-bottom: 15px;
     border-radius: 12px;
     
-    display: grid;
-    grid-template-columns: .5fr 1fr;
-    grid-template-rows: .5fr 1fr;
-    column-gap: 10px;
-    row-gap: 10px;
-    
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+
     overflow-y: scroll;
 }
 
@@ -176,29 +172,30 @@ h1 {
 .result-container {
     background-color: var(--bg2);
     height: 237px;
-    width: 167px;
+    width: 340px;
     border-radius: 12px;
     cursor: pointer;
-
+    margin-bottom: 15px;
+    
     & img {
         height: 167px;
-        width: 167px;
+        width: 340px;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         object-fit: cover;
     }
 
-    & h3 {
-        margin: 0;
-        margin-left: 12px;
-        margin-bottom: 5px;
+    & .details {
+        height: 60px;
+        white-space: nowrap;
     }
 
+    & h3,
     & p {
-        margin: 0;
-        margin-left: 12px;
+        margin: 5px auto 5px 12px;
+        width: 260px;
+        overflow: hidden;
     }
-
 }
 
 /* bottom nav */

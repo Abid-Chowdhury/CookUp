@@ -56,7 +56,7 @@ function updateResults(results) {
 function showResults(results, meals) {
     const resultsContainer = document.getElementById('results-container')
 
-    for (i = 1; i < results+1; i++) {
+    for (i = 0; i < results; i++) {
         const resultContainer = document.createElement('div')
         resultContainer.classList.add('result-container')
         resultContainer.id = `result-${i}`
