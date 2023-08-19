@@ -154,22 +154,35 @@ h1 {
 
 /* results container */
 .results-container {
-    /* background-color: var(--bg2); */
     height: 62vh;
     width: 100%;
     margin-bottom: 15px;
     border-radius: 12px;
+    
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: .5fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.results-container::-webkit-scrollbar {
+  display: none;
 }
 
 .result-container {
     background-color: var(--bg2);
     height: 237px;
-    width: 175px;
+    width: 167px;
     border-radius: 12px;
+    cursor: pointer;
 
     & img {
-        height: 175px;
-        width: 175px;
+        height: 167px;
+        width: 167px;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         object-fit: cover;
@@ -177,10 +190,13 @@ h1 {
 
     & h3 {
         margin: 0;
+        margin-left: 12px;
+        margin-bottom: 5px;
     }
 
     & p {
         margin: 0;
+        margin-left: 12px;
     }
 
 }
