@@ -27,6 +27,7 @@ header {
 }
 
 h1 {
+    cursor: pointer;
     margin: 0;
     font-size: var(--heading);
     font-family: 'Fugaz One', cursive;
