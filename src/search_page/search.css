@@ -152,6 +152,39 @@ h1 {
     font-weight: 400;
 }
 
+/* results container */
+.results-container {
+    /* background-color: var(--bg2); */
+    height: 62vh;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 12px;
+}
+
+.result-container {
+    background-color: var(--bg2);
+    height: 237px;
+    width: 175px;
+    border-radius: 12px;
+
+    & img {
+        height: 175px;
+        width: 175px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        object-fit: cover;
+    }
+
+    & h3 {
+        margin: 0;
+    }
+
+    & p {
+        margin: 0;
+    }
+
+}
+
 /* bottom nav */
 .bottom-nav-container {
     background-color: var(--bg2);

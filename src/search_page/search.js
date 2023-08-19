@@ -41,11 +41,11 @@ async function fetchAPI() {
     }
 }
 
-fetchAPI()
-    .then(results => {
-        updateResults(results)
-    })
-
+// fetchAPI()
+    // .then(results => {
+        // updateResults(results)
+    // })
+updateResults(2)
 function updateResults(results) {
     var totalResultsLabel = getID('total-results')
     totalResultsLabel.innerHTML = `${results} results for ${searchQuery}`
