@@ -33,22 +33,53 @@ async function fetchAPI() {
         const response = await fetch(apiUrl)
         const data = await response.json()
         console.log(data)
-        results = data.meals.length
-        return results
+        return data
     } catch (error) {
         console.error('Fetch error:', error)
         return 0
     }
 }
 
-// fetchAPI()
-    // .then(results => {
-        // updateResults(results)
-    // })
-updateResults(2)
+fetchAPI()
+    .then(data => {
+        results = data.meals.length
+        meals = data.meals
+        updateResults(results)
+        showResults(results, meals)
+    })
+
 function updateResults(results) {
     var totalResultsLabel = getID('total-results')
     totalResultsLabel.innerHTML = `${results} results for ${searchQuery}`
 }
 
+function showResults(results, meals) {
+    const resultsContainer = document.getElementById('results-container')
 
+    for (i = 1; i < results+1; i++) {
+        const resultContainer = document.createElement('div')
+        resultContainer.classList.add('result-container')
+        resultContainer.id = `result-${i}`
+
+        const imageElement = document.createElement('img')
+        imageElement.src = meals[i].strMealThumb
+        imageElement.alt = 'recipe image'
+
+        const detailsDiv = document.createElement('div')
+        detailsDiv.classList.add('details')
+
+        const h3Element = document.createElement('h3')
+        h3Element.textContent = meals[i].strMeal
+
+        const pElement = document.createElement('p')
+        pElement.textContent = meals[i].strArea
+
+        detailsDiv.appendChild(h3Element)
+        detailsDiv.appendChild(pElement)
+
+        resultContainer.appendChild(imageElement)
+        resultContainer.appendChild(detailsDiv)
+
+        resultsContainer.appendChild(resultContainer)
+    }
+}
