@@ -94,7 +94,7 @@ function showResults(results, meals) {
         rightDiv.appendChild(heartImageElement);
 
         detailsDiv.appendChild(leftDiv);
-        detailsDiv.appendChild(rightDiv);
+        // detailsDiv.appendChild(rightDiv);
         
         resultContainer.appendChild(imageElement)
         resultContainer.appendChild(detailsDiv)
