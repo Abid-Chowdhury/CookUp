@@ -75,7 +75,9 @@ function showResults(results, meals) {
         pElement.textContent = meals[i].strArea
 
         detailsDiv.appendChild(h3Element)
-        detailsDiv.appendChild(pElement)
+        if (meals[i].strArea != 'Unknown') {
+            detailsDiv.appendChild(pElement)
+        }
 
         resultContainer.appendChild(imageElement)
         resultContainer.appendChild(detailsDiv)
