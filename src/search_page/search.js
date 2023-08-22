@@ -32,10 +32,10 @@ async function fetchAPI() {
     try {
         const response = await fetch(apiUrl)
         const data = await response.json()
-        console.log(data)
+        // console.log(data)
         return data
     } catch (error) {
-        console.error('Fetch error:', error)
+        // console.error('Fetch error:', error)
         return 0
     }
 }

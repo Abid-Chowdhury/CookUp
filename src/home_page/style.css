@@ -135,7 +135,12 @@ h1 {
 .recipe-card .right-side {
     width: 100%;
     justify-content: space-around;
-    padding: 15px 0px 0px 15px;
+    padding: 0px 0px 0px 15px;
+}
+
+.recipe-card .right-side h3 {
+    margin-top: 15px;
+    margin-bottom: auto;
 }
 
 .recipe-card .top {
