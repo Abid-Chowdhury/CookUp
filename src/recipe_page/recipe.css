@@ -48,6 +48,11 @@ h1 {
     width: 48px;
 }
 
+/* recipe container */
+/* .recipe-container { */
+    /* height: 637px; */
+/* } */
+
 /* recipe image */
 .recipe-image {
     width: 100%;
@@ -92,9 +97,20 @@ h1 {
     max-width: 100%;
     max-height: 80px;
     margin-top: 0;
+    margin-bottom: 15px;
 }
 
 /* ingredients */
+.ingredients h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.right-side,
+.left-side {
+    margin-bottom: 15px;
+}
+
 .ingredients-list {
     font-size: 20px;
     display: flex;
@@ -116,6 +132,7 @@ h1 {
 .recipe-buttons {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 15px;
 
     & div {
         background-color: var(--ac);
