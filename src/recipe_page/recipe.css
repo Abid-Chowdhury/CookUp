@@ -90,6 +90,15 @@ h1 {
     }
 }
 
+/* hr */
+hr {
+    height: 2px;
+    border: none;
+    background-color: var(--ac);
+    margin: 0 15px;
+    border-radius: 2px;
+}
+
 /* details */
 .details p {
     overflow: hidden;
@@ -98,6 +107,10 @@ h1 {
     max-height: 80px;
     margin-top: 0;
     margin-bottom: 15px;
+}
+
+.details h4 {
+    margin: 15px 0;
 }
 
 /* ingredients */
