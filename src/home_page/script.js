@@ -39,13 +39,65 @@ fetchAPI()
     .then(data => {
         results = data.meals.length
         meals = data.meals
-        showResults(results, meals)
+        showSuggestedRecipes(results, meals)
+        showAllRecipes(results, meals)
     })
 
-function showResults(results, meals) {
+function showSuggestedRecipes(results, meals) {
+
+    const resultsContainer = document.getElementById('suggestion-cards-container')
+
+    for (i = 0; i < 2; i++) {
+        const resultContainer = document.createElement('div')
+        resultContainer.classList.add('suggestion-container')
+        resultContainer.id = `suggestion-${i}`
+
+        const imageElement = document.createElement('img')
+        imageElement.src = meals[i].strMealThumb
+        imageElement.alt = 'suggestion image'
+        imageElement.classList.add('suggestion-image')
+
+        const detailsDiv = document.createElement('div')
+        detailsDiv.classList.add('details')
+
+        const leftDiv = document.createElement('div')
+        leftDiv.classList.add('left')
+
+        const h3Element = document.createElement('h3')
+        h3Element.textContent = meals[i].strMeal
+
+        // const pElement = document.createElement('p')
+        // pElement.textContent = meals[i].strArea
+
+        leftDiv.appendChild(h3Element)
+        // if (meals[i].strArea != 'Unknown') {
+        //     leftDiv.appendChild(pElement)
+        // }
+
+        const rightDiv = document.createElement('div')
+        rightDiv.classList.add('right')
+
+        const heartImageElement = document.createElement('img');
+        heartImageElement.classList.add('heart');
+        heartImageElement.src = '../images/profile_image.jpg';
+        heartImageElement.alt = 'heart image';
+
+        rightDiv.appendChild(heartImageElement);
+
+        detailsDiv.appendChild(leftDiv);
+        // detailsDiv.appendChild(rightDiv);
+        
+        resultContainer.appendChild(imageElement)
+        resultContainer.appendChild(detailsDiv)
+
+        resultsContainer.appendChild(resultContainer)
+    }
+}
+
+function showAllRecipes(results, meals) {
     const resultsContainer = document.getElementById('results-container')
 
-    for (i = 0; i < results; i++) {
+    for (i = 2; i < results; i++) {
         const resultContainer = document.createElement('div')
         resultContainer.classList.add('result-container')
         resultContainer.id = `result-${i}`

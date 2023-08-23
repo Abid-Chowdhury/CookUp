@@ -76,37 +76,30 @@ h1 {
     }
 }
 
-/* suggestions */
+/* suggestions container */
 .suggestions-container {
-    margin-top: 20px;
-
     & h2 {
         margin: 15px 0;
     }
-}
 
-.suggestion-cards-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+    & img {
+        height: 160px;
+        width: 160px;
+        border-radius: 15px;
+    }
 
-.suggestion-card {
-    /* background-color: var(--bg2); */
-    width: 45%;
-    overflow: hidden;
-}
+    .suggestion-cards-container {
+        display: flex;
+        justify-content: space-between;
+        
+        & h3 {
+            margin: 5px 0;
+        }
 
-.suggestion-card img {
-    height: 160px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.suggestion-card h3 {
-    margin-top: 5px;
-    margin-bottom: 0px;
+        .suggestion-container {
+            cursor: pointer;
+        }
+    }
 }
 
 /* all recipes */
@@ -171,15 +164,17 @@ h1 {
 
 /* results container */
 .results-container {
-    height: 260px;
+    height: 270px;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-radius: 12px;
     
     display: flex;
     flex-direction: column;
 
     overflow-y: scroll;
+    overflow-x: hidden;
+
 }
 
 .results-container::-webkit-scrollbar {
