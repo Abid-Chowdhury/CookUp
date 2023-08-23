@@ -78,7 +78,11 @@ h1 {
 
 /* suggestions */
 .suggestions-container {
-    margin-top: 20px
+    margin-top: 20px;
+
+    & h2 {
+        margin: 15px 0;
+    }
 }
 
 .suggestion-cards-container {
@@ -158,6 +162,78 @@ h1 {
     font-weight: 400;
 }
 
+
+/* all recipes header */
+.all-recipes-header {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* results container */
+.results-container {
+    height: 260px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+}
+
+.results-container::-webkit-scrollbar {
+    display: none;
+}
+
+.result-container {
+    background-color: var(--bg2);
+    height: 237px;
+    width: 340px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: flex;
+    
+    & .recipe-image {
+        /* height: 167px; */
+        /* width: 340px; */
+        /* border-top-left-radius: 12px; */
+        /* border-top-right-radius: 12px; */
+        /* object-fit: cover; */
+
+        height: 96px;
+        width: 96px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    & .details {
+        height: 96px;
+        white-space: nowrap;
+        display: flex;
+    }
+
+    & h3,
+    & p {
+        margin: 15px auto 5px 12px;
+        width: 260px;
+        overflow: hidden;
+    }
+
+    & .right {
+        width: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .heart {
+        height: 32px;
+        width: 32px;
+    }
+}
+
 /* bottom nav */
 .bottom-nav-container {
     background-color: var(--bg2);
@@ -185,3 +261,4 @@ h1 {
 .bottom-nav-container #active {
     background-color: var(--ac);
 }
+
