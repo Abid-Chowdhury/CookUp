@@ -47,7 +47,7 @@ function showSuggestedRecipes(results, meals) {
 
     const resultsContainer = document.getElementById('suggestion-cards-container')
 
-    for (i = 0; i < 2; i++) {
+    for (i = 0; i < 3; i++) {
         const resultContainer = document.createElement('div')
         resultContainer.classList.add('suggestion-container')
         resultContainer.id = `suggestion-${i}`

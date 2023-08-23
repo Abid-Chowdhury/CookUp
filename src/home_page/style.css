@@ -83,8 +83,8 @@ h1 {
     }
 
     & img {
-        height: 160px;
-        width: 160px;
+        height: 105px;
+        width: 105px;
         border-radius: 15px;
     }
 
@@ -164,7 +164,7 @@ h1 {
 
 /* results container */
 .results-container {
-    height: 270px;
+    height: 325px;
     width: 100%;
     margin-bottom: 10px;
     border-radius: 12px;
