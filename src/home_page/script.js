@@ -43,6 +43,10 @@ fetchAPI()
         showAllRecipes(results, meals)
     })
 
+function redirectToRecipePage(recipeID) {
+    console.log(recipeID)
+}
+
 function showSuggestedRecipes(results, meals) {
 
     const resultsContainer = document.getElementById('suggestion-cards-container')
@@ -51,6 +55,9 @@ function showSuggestedRecipes(results, meals) {
         const resultContainer = document.createElement('div')
         resultContainer.classList.add('suggestion-container')
         resultContainer.id = `suggestion-${i}`
+        
+        var recipeID = meals[i].idMeal
+        resultContainer.setAttribute('onclick', `redirectToRecipePage(${recipeID})`)
 
         const imageElement = document.createElement('img')
         imageElement.src = meals[i].strMealThumb
@@ -97,10 +104,13 @@ function showSuggestedRecipes(results, meals) {
 function showAllRecipes(results, meals) {
     const resultsContainer = document.getElementById('results-container')
 
-    for (i = 2; i < results; i++) {
+    for (i = 3; i < results; i++) {
         const resultContainer = document.createElement('div')
         resultContainer.classList.add('result-container')
         resultContainer.id = `result-${i}`
+
+        var recipeID = meals[i].idMeal
+        resultContainer.setAttribute('onclick', `redirectToRecipePage(${recipeID})`)
 
         const imageElement = document.createElement('img')
         imageElement.src = meals[i].strMealThumb
