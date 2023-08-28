@@ -99,8 +99,8 @@ hr {
     border-radius: 2px;
 }
 
-/* details */
-.details p {
+/* instructions */
+.instructions p {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
@@ -109,7 +109,7 @@ hr {
     margin-bottom: 15px;
 }
 
-.details h4 {
+.instructions h4 {
     margin: 15px 0;
 }
 

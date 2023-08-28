@@ -44,7 +44,7 @@ fetchAPI()
     })
 
 function redirectToRecipePage(recipeID) {
-    console.log(recipeID)
+    location.href = '../recipe_page/recipe.html?' + recipeID
 }
 
 function showSuggestedRecipes(results, meals) {

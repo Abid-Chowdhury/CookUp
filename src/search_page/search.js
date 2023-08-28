@@ -53,6 +53,11 @@ function updateResults(results) {
     totalResultsLabel.innerHTML = `${results} results for ${searchQuery}`
 }
 
+function redirectToRecipePage(recipeID) {
+    // console.log(recipeID)
+    location.href = '../recipe_page/recipe.html?' + recipeID
+}
+
 function showResults(results, meals) {
     const resultsContainer = document.getElementById('results-container')
 
@@ -60,6 +65,9 @@ function showResults(results, meals) {
         const resultContainer = document.createElement('div')
         resultContainer.classList.add('result-container')
         resultContainer.id = `result-${i}`
+
+        var recipeID = meals[i].idMeal
+        resultContainer.setAttribute('onclick', `redirectToRecipePage(${recipeID})`)
 
         const imageElement = document.createElement('img')
         imageElement.src = meals[i].strMealThumb
