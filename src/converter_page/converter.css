@@ -55,7 +55,8 @@ h1 {
 
 .conversion-unit input {
     height: 60px;
-    width: 246px;
+    width: 200px;
+    /* width: 246px; */
     background-color: var(--bg2);
     border: 0;
     outline: 0;
@@ -69,9 +70,10 @@ h1 {
 .conversion-unit select {
     border-radius: 0px 10px 10px 0px;
     background-color: var(--ac);
-    width: 105px;
+    width: 151px;
+    /* width: 105px; */
     height: 60px;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     border: none;
     outline: none;
