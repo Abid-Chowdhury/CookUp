@@ -22,10 +22,12 @@ sq.addEventListener('keydown', (e) => {
 
 // set search input to searchQuery
 var searchQuery = (window.location.search).replace('?', '')
+var query = searchQuery.replace('ing=true&', '')
 var searchInput = document.getElementById('search-query')
-searchInput.value = searchQuery
+searchInput.value = query
 
-// api call
+
+// api calls
 async function fetchAPI() {
     const apiUrl = `http://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`
     
@@ -40,13 +42,39 @@ async function fetchAPI() {
     }
 }
 
-fetchAPI()
-    .then(data => {
-        results = data.meals.length
-        meals = data.meals
-        updateResults(results)
-        showResults(results, meals)
+async function ingredientsAPI() {
+    var query = searchQuery.replace('ing=true&', '')
+    const apiUrl = `http://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`
+
+    
+    try {
+        const response = await fetch(apiUrl)
+        const data = await response.json()
+        // console.log(data)
+        return data
+    } catch (error) {
+        // console.error('Fetch error:', error)
+        return 0
+    }
+}
+
+if (searchQuery.includes('ing=true')) {
+    ingredientsAPI()
+        .then(data => {
+            results = data.meals.length
+            meals = data.meals
+            updateResults(results)
+            showResults(results, meals)
     })
+} else {
+    fetchAPI()
+        .then(data => {
+            results = data.meals.length
+            meals = data.meals
+            updateResults(results)
+            showResults(results, meals)
+        })
+}
 
 function updateResults(results) {
     var totalResultsLabel = getID('total-results')

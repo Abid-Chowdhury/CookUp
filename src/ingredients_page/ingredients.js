@@ -4,7 +4,7 @@ function getID(str) {
 
 // search button function
 function redirectToSearchPage(query) {
-    location.href = '../search_page/search.html?' + query
+    location.href = '../search_page/search.html?' + 'ing=true&' + query
 }
 
 var searchButton = getID('search-container')
