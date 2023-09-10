@@ -78,7 +78,8 @@ if (searchQuery.includes('ing=true')) {
 
 function updateResults(results) {
     var totalResultsLabel = getID('total-results')
-    totalResultsLabel.innerHTML = `${results} results for ${searchQuery}`
+    var query = searchQuery.replace('ing=true&', '')
+    totalResultsLabel.innerHTML = `${results} results for ${query}`
 }
 
 function redirectToRecipePage(recipeID) {
