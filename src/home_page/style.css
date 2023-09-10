@@ -12,12 +12,27 @@
     --heading: 48px;
 }
 
+html {
+    height: 844px;
+    width: 390px;
+    background-color: #151617;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 body {
     background-color: var(--bg);
     color: var(--fg);
     padding: 15px;
     font-family: 'Inter', sans-serif;
     overflow-y: hidden;
+    height: 808px;
+    width: 344px;
+    margin: auto;
+    border-radius: 15px;
 }
 
 /* header */
