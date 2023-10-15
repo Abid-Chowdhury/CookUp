@@ -7,7 +7,7 @@
     --bg: rgb(42, 43, 46);
     --bg2: rgb(52, 53, 56);
     --fg: rgb(245, 240, 246);
-    --ac: rgb(225, 116, 81);
+    --ac: #e17451;
 
     --heading: 48px;
 }
@@ -171,7 +171,7 @@ h1 {
 
 /* results container */
 .results-container {
-    height: 62vh;
+    height: 53vh;
     width: 100%;
     margin-bottom: 15px;
     border-radius: 12px;
