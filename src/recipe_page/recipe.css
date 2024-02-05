@@ -36,6 +36,11 @@ body {
     border-radius: 15px;
 }
 
+/* main container */
+.main-container {
+    height: 808px;
+}
+
 /* header */
 header {
     display: flex;
