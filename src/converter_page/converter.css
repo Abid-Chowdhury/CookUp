@@ -118,6 +118,7 @@ h1 {
     margin-right: auto;
     margin-bottom: 25px;
     margin-top: 25px;
+    cursor: pointer;
 
     & h2 {
         margin: 0;
