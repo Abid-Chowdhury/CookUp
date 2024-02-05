@@ -31,9 +31,21 @@ function updateElements(data) {
     recipeImage = getID('recipeImage')
     recipeImage.src = data.strMealThumb
 
-    recipeName = getID('name')
-    recipeName.innerHTML = data.strMeal
-
+    // if recipe name is too long, shorten it to make it fit
+    if (data.strMeal.length > 15)
+    {
+        recipeName = getID('name')
+        shortenedName = data.strMeal.substring(0, 18) + '...'
+        recipeName.innerHTML = shortenedName
+        // set max length to 15, and set 3 more character to '...'
+        console.log('long')
+    } else
+    {
+        console.log('short')
+        recipeName = getID('name')
+        recipeName.innerHTML = data.strMeal
+    }
+    
     recipeArea = getID('area')
     recipeArea.innerHTML = data.strArea
 
