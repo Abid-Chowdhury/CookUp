@@ -1,3 +1,4 @@
+// function to simplify 'return document.getElementById()'
 function getID(str) {
     return document.getElementById(str)
 }
@@ -13,6 +14,7 @@ searchIcon.onclick = function () {
     redirectToSearchPage()
 }
 
+// activate search function when 'enter' key is pressed
 var sq = document.getElementById('search-query')
 sq.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {

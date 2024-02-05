@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="main-container">
+        <!-- title and profile picture -->
         <header>
             <h1 onclick="window.location.href = '../home_page/index.html';">CookUp</h1>
             <div class="profile-button-container" onclick="window.location.href = '../profile_page/profile.html';">
@@ -15,11 +16,13 @@
             </div>
         </header>
 
+        <!-- search container -->
         <div class="search-recipes-container">
             <input id="search-query" type="text" placeholder="Search recipes">
             <img id="search-icon" src="../images/search.svg" alt="search icon">
         </div>
 
+        <!-- suggestions title and 3 recipes -->
         <div class="suggestions-container" id="suggestions-container">
             <h2>Suggestions</h2>
             <div class="suggestion-cards-container" id="suggestion-cards-container">
@@ -79,11 +82,13 @@
             </div>
         </div> -->
             
+        <!-- all recipes title and recipes -->
         <h2 class="all-recipes-header">All Recipes</h2>
 
         <div id="results-container" class="results-container">
         </div>
 
+        <!-- bottom nav -->
         <div class="bottom-nav-container">
             <section class="ingredients-button-container" onclick="window.location.href = '../ingredients_page/ingredients.html';">
                 <img src="../images/vegetable-accent.png">
