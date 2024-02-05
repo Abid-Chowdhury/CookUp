@@ -1,4 +1,3 @@
-
 const conversionFactors = {
             // Volume conversion factors (approximate)
             "70": 1, // Cups (US)
