@@ -20,7 +20,7 @@ async function fetchAPI() {
 fetchAPI()
     .then(data => {
         updateElements(data.meals[0])
-        console.log(data.meals[0])
+        // console.log(data.meals[0])
     })
 
 function redirectToSource(source) {
