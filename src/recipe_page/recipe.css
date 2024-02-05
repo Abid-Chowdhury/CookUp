@@ -135,6 +135,10 @@ hr {
 }
 
 /* ingredients */
+.ingredients {
+    height: 160px;
+}
+
 .ingredients h2 {
     margin-top: 15px;
     margin-bottom: 15px;
