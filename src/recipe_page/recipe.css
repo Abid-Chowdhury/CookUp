@@ -93,6 +93,7 @@ h1 {
 .header {
     display: flex;
     justify-content: space-between;
+    height: 62px;
 
     & #name {
         margin-bottom: 10px;
