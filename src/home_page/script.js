@@ -22,7 +22,7 @@ sq.addEventListener('keydown', (e) => {
 
 // api call
 async function fetchAPI() {
-    const apiUrl = `http://www.themealdb.com/api/json/v1/1/search.php?s=`
+    const apiUrl = `http://www.themealdb.com/api/json/v1/1/search.php?s`
     
     try {
         const response = await fetch(apiUrl)
