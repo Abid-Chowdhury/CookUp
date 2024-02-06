@@ -1,21 +1,25 @@
+/* Importing external fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:wght@300;400;600&display=swap');
+
+/* Uncomment one of the following lines to choose the font family */
 /* font-family: 'Fugaz One', cursive; */
 /* font-family: 'Inter', sans-serif; */
 
-/* Variables */
+/* Variables for color and size */
 :root {
-    --bg: rgb(42, 43, 46);
-    --bg2: rgb(52, 53, 56);
-    --fg: rgb(245, 240, 246);
-    --ac: rgb(225, 116, 81);
+    --bg: rgb(42, 43, 46);      /* Background color */
+    --bg2: rgb(52, 53, 56);     /* Secondary background color */
+    --fg: rgb(245, 240, 246);   /* Foreground color */
+    --ac: rgb(225, 116, 81);    /* Accent color */
 
-    --heading: 48px;
+    --heading: 48px;            /* Heading font size */
 }
 
+/* Styling for the entire HTML document */
 html {
     height: 844px;
     width: 390px;
-    background-color: #151617;
+    background-color: #151617;   /* Fallback background color */
     margin: 0;
     position: absolute;
     top: 50%;
@@ -23,6 +27,7 @@ html {
     transform: translate(-50%, -50%);
 }
 
+/* Styling for the body of the document */
 body {
     background-color: var(--bg);
     color: var(--fg);
@@ -35,12 +40,13 @@ body {
     border-radius: 15px;
 }
 
-/* Header */
+/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
 }
 
+/* Styling for the main title */
 h1 {
     cursor: pointer;
     margin: 0;
@@ -49,6 +55,7 @@ h1 {
     color: var(--ac);
 }
 
+/* Styling for the profile button container */
 .profile-button-container {
     height: 48px;
     width: 48px;
@@ -59,19 +66,19 @@ h1 {
     margin-bottom: auto;
 }
 
+/* Styling for the profile image within the button */
 .profile-button-container img {
     width: 48px;
 }
 
-/* Conversion unit */
+/* Styling for the conversion unit section */
 .conversion-unit {
     display: flex;
 }
 
+/* Styling for the input field in the conversion unit */
 .conversion-unit input {
-    /* height: 60px; */
     width: 200px;
-    /* width: 246px; */
     background-color: var(--bg2);
     border: 0;
     outline: 0;
@@ -82,11 +89,11 @@ h1 {
     font-weight: 600;
 }
 
+/* Styling for the select dropdown in the conversion unit */
 .conversion-unit select {
     border-radius: 0px 10px 10px 0px;
     background-color: var(--ac);
     width: 140px;
-    /* width: 105px; */
     height: 60px;
     font-size: 16px;
     text-align: center;
@@ -95,17 +102,18 @@ h1 {
     cursor: pointer;
 }
 
+/* Styling for individual options within the select dropdown */
 .conversion-unit option {
     background-color: var(--bg2);
     color: white;
 }
 
-/* Down arrow */
+/* Styling for the down arrow section */
 .down-arrow {
     text-align: center;
 }
 
-/* convert button */
+/* Styling for the convert button */
 .button {
     text-align: center;
     background-color: var(--ac);
@@ -120,22 +128,24 @@ h1 {
     margin-bottom: 25px;
     margin-top: 25px;
     cursor: pointer;
-
-    & h2 {
-        margin: 0;
-    }
 }
 
-/* bottom nav */
+/* Styling for the text within the convert button */
+.button h2 {
+    margin: 0;
+}
+
+/* Styling for the bottom navigation container */
 .bottom-nav-container {
     background-color: var(--bg2);
     width: 100%;
     height: 70px;
     border-radius: 12px;
     display: flex;
-    margin-top: 98%;
+    margin-top: 98%; /* Note: This may need adjustment based on the layout */
 }
 
+/* Styling for individual sections within the bottom navigation */
 .bottom-nav-container section {
     height: 70px;
     width: 100%;
@@ -144,6 +154,7 @@ h1 {
     cursor: pointer;
 }
 
+/* Styling for images within the bottom navigation */
 .bottom-nav-container img {
     width: 48px;
     height: 48px;
@@ -151,6 +162,7 @@ h1 {
     object-fit: cover;
 }
 
+/* Styling for the active section within the bottom navigation */
 .bottom-nav-container #active {
     background-color: var(--ac);
 }
