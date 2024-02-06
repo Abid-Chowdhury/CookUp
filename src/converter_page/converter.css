@@ -2,7 +2,7 @@
 /* font-family: 'Fugaz One', cursive; */
 /* font-family: 'Inter', sans-serif; */
 
-/* variables */
+/* Variables */
 :root {
     --bg: rgb(42, 43, 46);
     --bg2: rgb(52, 53, 56);
@@ -35,7 +35,7 @@ body {
     border-radius: 15px;
 }
 
-/* header */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -63,7 +63,7 @@ h1 {
     width: 48px;
 }
 
-/* conversion unit */
+/* Conversion unit */
 .conversion-unit {
     display: flex;
 }
@@ -100,7 +100,7 @@ h1 {
     color: white;
 }
 
-/* down arrow */
+/* Down arrow */
 .down-arrow {
     text-align: center;
 }
