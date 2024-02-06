@@ -1,18 +1,18 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:wght@300;400;600&display=swap');
-/* font-family: 'Fugaz One', cursive; */
-/* font-family: 'Inter', sans-serif; */
 
-/* variables */
+/* Root variables for color and heading font size */
 :root {
-    --bg: rgb(42, 43, 46);
-    --bg2: rgb(52, 53, 56);
-    --fg: rgb(245, 240, 246);
-    --ac: rgb(225, 116, 81);
-
-    --heading: 48px;
+    --bg: rgb(42, 43, 46);   /* Background color */
+    --bg2: rgb(52, 53, 56);  /* Secondary background color */
+    --fg: rgb(245, 240, 246);/* Foreground (text) color */
+    --ac: rgb(225, 116, 81); /* Accent color */
+    --heading: 48px;         /* Heading font size */
 }
 
+/* General styling for HTML */
 html {
+    /* Centering the page vertically and horizontally */
     height: 844px;
     width: 390px;
     background-color: #151617;
@@ -23,6 +23,7 @@ html {
     transform: translate(-50%, -50%);
 }
 
+/* General styling for the body */
 body {
     background-color: var(--bg);
     color: var(--fg);
@@ -35,12 +36,13 @@ body {
     border-radius: 15px;
 }
 
-/* header */
+/* Styling for the header section */
 header {
     display: flex;
     justify-content: space-between;
 }
 
+/* Styling for the main heading */
 h1 {
     cursor: pointer;
     margin: 0;
@@ -49,6 +51,7 @@ h1 {
     color: var(--ac);
 }
 
+/* Styling for the profile button container */
 .profile-button-container {
     height: 48px;
     width: 48px;
@@ -59,80 +62,92 @@ h1 {
     margin-bottom: auto;
 }
 
+/* Styling for the profile button image */
 .profile-button-container img {
     width: 48px;
 }
 
-/* search recipes */
+/* Styling for the search recipes container */
 .search-recipes-container {
     margin-top: 20px;
     background-color: var(--bg2);
     border-radius: 12px;
     display: flex;
-
-    & img {
-        margin-right: 15px;
-    }
-
-    & input {
-        width: 100%;
-        box-sizing: border-box;
-        font-size: 20px;
-        padding: 15px;
-        border-radius: 12px;
-        background: none;
-        border: none;
-        outline:  none;
-        color: var(--fg);
-    }
-
-    & input::placeholder {
-        color: var(--fg)
-    }
 }
 
-/* suggestions container */
+/* Styling for search input, icon, and placeholder */
+.search-recipes-container img {
+    margin-right: 15px;
+}
+
+.search-recipes-container input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--fg);
+}
+
+.search-recipes-container input::placeholder {
+    color: var(--fg);
+}
+
+/* Styling for suggestions container */
 .suggestions-container {
-    & h2 {
+    margin-top: 20px;
+
+    /* Styling for suggestions heading */
+    h2 {
         margin: 15px 0;
     }
 
-    & img {
+    /* Styling for suggestion images */
+    img {
         height: 105px;
         width: 105px;
         border-radius: 15px;
     }
 
+    /* Styling for suggestion cards container */
     .suggestion-cards-container {
         display: flex;
         justify-content: space-between;
-        
-        & h3 {
+
+        /* Styling for suggestion card titles */
+        h3 {
             margin: 5px 0;
         }
 
+        /* Styling for individual suggestion container */
         .suggestion-container {
             cursor: pointer;
         }
     }
 }
 
-/* all recipes */
+/* Styling for recipe cards container */
 .recipe-cards-container {
     height: 260px;
     margin-bottom: 5px;
     overflow-y: scroll;
 }
 
+/* Removing default scrollbar style for recipe cards container */
 .recipe-cards-container::-webkit-scrollbar {
     display: none;
 }
 
+/* Styling for individual recipe cards */
 .recipe-card {
     display: flex;
     margin-bottom: 5px;
 }
 
+/* Styling for recipe card images */
 .recipe-card img {
     height: 96px;
     width: 96px;
@@ -140,62 +155,68 @@ h1 {
     border-radius: 12px;
 }
 
+/* Styling for recipe card titles */
 .recipe-card h3 {
     margin: 0;
 }
 
+/* Styling for right-side details of recipe cards */
 .recipe-card .right-side {
     width: 100%;
     justify-content: space-around;
     padding: 0px 0px 0px 15px;
 }
 
+/* Additional styling for recipe card titles in right-side details */
 .recipe-card .right-side h3 {
     margin-top: 15px;
     margin-bottom: auto;
 }
 
+/* Styling for the top section of recipe cards */
 .recipe-card .top {
     display: flex;
     justify-content: space-between;
 }
 
+/* Styling for recipe card rating section */
 .recipe-card .rating {
     background-color: var(--bg2);
     padding: 10px 20px;
     border-radius: 10px;
 }
 
+/* Styling for bottom section of recipe cards */
 .recipe-card .bottom h3 {
     font-weight: 400;
 }
 
-
-/* all recipes header */
+/* Styling for the all recipes header */
 .all-recipes-header {
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-/* results container */
+/* Styling for the results container */
 .results-container {
     height: 325px;
     width: 100%;
     margin-bottom: 10px;
     border-radius: 12px;
-    
     display: flex;
     flex-direction: column;
 
+    /* Styling for the scrollbar in results container */
     overflow-y: scroll;
     overflow-x: hidden;
-
 }
 
+/* Removing default scrollbar style for results container */
 .results-container::-webkit-scrollbar {
     display: none;
 }
 
+/* Styling for individual result container */
 .result-container {
     background-color: var(--bg2);
     height: 237px;
@@ -204,47 +225,45 @@ h1 {
     cursor: pointer;
     margin-bottom: 15px;
     display: flex;
-    
-    & .recipe-image {
-        /* height: 167px; */
-        /* width: 340px; */
-        /* border-top-left-radius: 12px; */
-        /* border-top-right-radius: 12px; */
-        /* object-fit: cover; */
 
+    /* Styling for recipe card images in result container */
+    .recipe-image {
         height: 96px;
         width: 96px;
         object-fit: cover;
         border-radius: 12px;
     }
 
-    & .details {
+    /* Styling for details section in result container */
+    .details {
         height: 96px;
         white-space: nowrap;
         display: flex;
     }
 
-    & h3,
-    & p {
+    /* Styling for title and area in result container */
+    h3, p {
         margin: 15px auto 5px 12px;
         width: 260px;
         overflow: hidden;
     }
 
-    & .right {
+    /* Styling for the right section in result container */
+    .right {
         width: 68px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    & .heart {
+    /* Styling for the heart icon in result container */
+    .heart {
         height: 32px;
         width: 32px;
     }
 }
 
-/* bottom nav */
+/* Styling for the bottom navigation container */
 .bottom-nav-container {
     background-color: var(--bg2);
     width: 100%;
@@ -253,6 +272,7 @@ h1 {
     display: flex;
 }
 
+/* Styling for individual sections in the bottom navigation container */
 .bottom-nav-container section {
     height: 70px;
     width: 100%;
@@ -261,6 +281,7 @@ h1 {
     cursor: pointer;
 }
 
+/* Styling for icons in the bottom navigation container */
 .bottom-nav-container img {
     width: 48px;
     height: 48px;
@@ -268,7 +289,7 @@ h1 {
     object-fit: cover;
 }
 
+/* Styling for the active section in the bottom navigation container */
 .bottom-nav-container #active {
     background-color: var(--ac);
 }
-
