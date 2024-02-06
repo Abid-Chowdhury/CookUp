@@ -92,6 +92,7 @@ h1 {
     text-align: center;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .conversion-unit option {
