@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Document metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External stylesheet link -->
     <link rel="stylesheet" href="converter.css">
+
+    <!-- Page title -->
     <title>Converter</title>
 </head>
 <body>
+    <!-- Main container for the page content -->
     <div class="main-container">
+        <!-- Header section -->
         <header>
+            <!-- Clickable CookUp logo, redirects to home page -->
             <h1 onclick="window.location.href = '../home_page/index.html';">CookUp</h1>
+            
+            <!-- Profile button, redirects to profile page -->
             <div class="profile-button-container" onclick="window.location.href = '../profile_page/profile.html';">
                 <img src="../images/profile_image.jpg" alt="profile image">
             </div>
         </header>
 
+        <!-- Unit Converter container -->
         <div class="converter-container">
+            <!-- Title for the unit converter section -->
             <h2>Unit Converter</h2>
+
+            <!-- Top conversion unit input and select dropdown -->
             <div class="conversion-unit" id="top">
                 <input value="1" placeholder="1" id="first-input">
 
+                <!-- Dropdown for selecting the first unit -->
                 <select name="first-unit" id="first-unit">
                     <option value="70" unittype="volume">Cups (US)</option>
                     <option value="201" unittype="volume">Cups (Metric)</option>
@@ -48,14 +63,17 @@
                 </select>
             </div>
 
+            <!-- Down arrow image indicating conversion direction -->
             <div class="down-arrow">
                 <img src="../images/arrow.png" alt="down-arrow">
             </div>
 
+            <!-- Bottom conversion unit input, select dropdown, and conversion button -->
             <div class="conversion-unit" id="bottom">
                 <input value="3" placeholder="3" id="second-input">
 
-                 <select name="second-unit" id="second-unit">
+                <!-- Dropdown for selecting the second unit -->
+                <select name="second-unit" id="second-unit">
                     <option value="70" unittype="volume">Cups (US)</option>
                     <option value="201" unittype="volume">Cups (Metric)</option>
                     <option value="158" unittype="volume">Cups (Imperial)</option>
@@ -83,18 +101,25 @@
                 </select>
             </div>
 
+            <!-- Convert button triggering conversion operation -->
             <div class="button" id="convert" onclick="convert()">
                 <h2>Convert</h2>
             </div>
         </div>
 
+        <!-- Bottom navigation container -->
         <div class="bottom-nav-container">
+            <!-- Ingredients button, redirects to ingredients page -->
             <section class="ingredients-button-container" onclick="window.location.href = '../ingredients_page/ingredients.html';">
                 <img src="../images/vegetable-accent.png">
             </section>
+            
+            <!-- Recipes button, redirects to home page -->
             <section class="recipes-button-container" onclick="window.location.href = '../home_page/index.html';">
                 <img src="../images/home-accent.svg">
             </section>
+            
+            <!-- Calculator button (active), redirects to converter page -->
             <section class="calculator-button-container" id="active" onclick="window.location.href = '../converter_page/converter.html'">
                 <img src="../images/converter.png">
             </section>
@@ -102,6 +127,7 @@
 
     </div>
 
+    <!-- Script link for the JavaScript file -->
     <script src="converter.js"></script>
 </body>
 </html>
